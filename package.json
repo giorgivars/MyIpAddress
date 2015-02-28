@@ -1,0 +1,8 @@
+{
+  "name": "my-ip-address",
+  "version": "0.0.2",
+  "author": "Jeremie Robert",
+  "dependencies": {
+	"express": "latest"
+  }
+}
