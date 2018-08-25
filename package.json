@@ -4,5 +4,8 @@
   "author": "Jeremie Robert",
   "dependencies": {
 	"express": "latest"
+  },
+  "scripts": {
+    "start": "node web.js"
   }
 }
