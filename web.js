@@ -15,7 +15,7 @@ app.get('/api/ipaddress.json', function(request, response){
 	        || req.connection.remoteAddress;
 	};
 	// response.send(getClientAddress(request));
-	response.json({ipAddress:getClientAddress(request),remoteAddress:request.connection.remoteAddress,forwarded:request.headers['x-forwarded-for']});
+	response.json({fresh:request.fresh,xhr:request.xhr,protocol:request.protocol,ipAddress:getClientAddress(request),remoteAddress:request.connection.remoteAddress,forwarded:request.headers['x-forwarded-for']});
 });
 
 var port = process.env.PORT || 3000;
