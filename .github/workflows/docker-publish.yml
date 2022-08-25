@@ -7,7 +7,7 @@ name: Docker
 
 on:
   schedule:
-    - cron: '34 1 * * *'
+    - cron: '34 1 1 * *'
   push:
     branches: [ "master" ]
     # Publish semver tags as releases.
@@ -57,7 +57,7 @@ jobs:
         uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
         with:
           username: jerob
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.DOCKER_HUB }}
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
