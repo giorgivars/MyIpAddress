@@ -19,7 +19,7 @@ app.get('/api/ipaddress.json', function(request, response){
 	response.json({userAgent:request.headers['user-agent'],method:request.method,fresh:request.fresh,xhr:request.xhr,protocol:request.protocol,ipAddress:getClientAddress(request),remoteAddress:request.connection.remoteAddress,forwarded:request.headers['x-forwarded-for']});
 });
 
-# Using built-in http library and public API from https://www.ipify.org/
+// Using built-in http library and public API from https://www.ipify.org/
 http.get({'host': 'api.ipify.org', 'port': 80, 'path': '/'}, function(resp) {
   resp.on('data', function(ip) {
     console.log("My public IP address is: " + ip);
